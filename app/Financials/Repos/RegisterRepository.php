@@ -63,7 +63,7 @@ class RegisterRepository implements RegisterRepositoryInterface {
 
 		$register->register_id = array_get($data,'prefix') . \Helpers::recordNumGen($this->entries_count() + 1);//array_get($data,'ref') . "-" . ($this->entries_count() + 1);
 		$register->module_id = array_get($data,'module_id');
-		$register->account_id = 1;
+		$register->account_id = 3;
 		$register->po_id = array_get($data,'ref_id');
 		$register->account_value = array_get($data,'amount');
 		$register->register_refno = array_get($data, 'refno');
