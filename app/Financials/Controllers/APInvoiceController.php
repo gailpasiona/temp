@@ -178,7 +178,7 @@ class APInvoiceController extends \BaseController{
 				}catch(\PDOException $e){
 					\DB::rollBack();
 					$return_info['status'] = 'success_failed';
-					$return_info['message'] = 'Transaction Failed, Please contact System Administrator';
+					$return_info['message'] = $e.getMessage();//'Transaction Failed, Please contact System Administrator';
 				}
 				
 				return \Response::json($return_info);
